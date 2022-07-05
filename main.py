@@ -411,3 +411,51 @@ def BSF(G, vi):
         G.vertices[u]['cor'] = 'preto'
 
     return saida
+
+
+#Caminhos Minimos
+
+def escolherMinimo():    #Função usada para escolher o vertice vj que pertence a V - V' que minimiza o c(j)
+    a = 1
+
+def dijkstra(G, vi, vj):
+
+    listaV = list()       #lista de vert V - V'
+    lista = list()         #Lista de vertices V'
+    infinito = float('inf')
+    distancia = []     #Distancia de vi a cada vertice
+    pred = []   #predecessor de cada vértice
+
+
+    listaV = G.vertices()
+    listaV.remove(vi)
+    lista.append(vi)
+
+    for v in range(G.vertice()):
+        distancia[v].append(RecuperaPeso(G, vi, v))
+        pred[v].append(None)
+
+    
+    while (len(lista) != len(G.vertice)):
+        vmin = escolherMinimo() #Escrever função escolherMinimo()
+        lista.append(vmin)
+        for i in 
+
+        for i in lista:
+            if (distancia[i] < min):
+                min = distancia[i];
+                u = i
+        
+        try:
+            lista.remove(u)
+        except:
+            lista.pop(0)
+
+        for i in #vizinhos de vmin:
+            if((distancia[i]) < (distancia[vmin] + RecuperaPeso(G, vmin, i))):
+                distancia[i] = distancia[i]
+            else:
+                distancia[i] = (distancia[vmin] + RecuperaPeso(G, vmin, i))
+            
+
+
